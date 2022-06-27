@@ -9,9 +9,11 @@ interface LessonProps {
   slug: string;
   availableAt: Date;
   type: 'live' | 'class';
+  isSidebarOpen: boolean;
+  setIsSidebarOpen: (v: boolean) => void;
 }
 
-export function Lesson({title,slug,availableAt,type}: LessonProps) {
+export function Lesson({title,slug,availableAt,type, setIsSidebarOpen}: LessonProps) {
   const availableDateFormatted = format(availableAt, "EEEE' • ' d MMMM' • 'k':'mm")
   const [isLessonAvailable, setIsLessonAvailable] = useState(isPast(availableAt))
   const data = useParams<{slug: string}>()
@@ -19,7 +21,11 @@ export function Lesson({title,slug,availableAt,type}: LessonProps) {
   const isActiveLesson = slug === data.slug
   
   return (
-    <Link to={`/event/lesson/${slug}`} className="group">
+    <Link
+     to={`/event/lesson/${slug}`}
+     className="group"
+     onClick={() => {setIsSidebarOpen(false)}}
+     >
       <span className="text-gray-300 ">
         {availableDateFormatted}
       </span>
