@@ -12,7 +12,7 @@ export function Event() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
   console.log(isSidebarOpen)
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen ">
     <Header 
     setIsSidebarOpen={setIsSidebarOpen}
     isSidebarOpen={isSidebarOpen}

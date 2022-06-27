@@ -6,3 +6,36 @@ body {
   @apply bg-gray-900 text-gray-100;
   -webkit-font-smoothing: antialiased;
 }
+
+body::-webkit-scrollbar,
+aside::-webkit-scrollbar {
+  width: 12px; /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track,
+aside::-webkit-scrollbar-track {
+  background: black; /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb,
+aside::-webkit-scrollbar-thumb {
+  background-color: #29292e; /* color of the scroll thumb */
+
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 3px solid black; /* creates padding around scroll thumb */
+}
+
+aside::-webkit-scrollbar {
+  width: 0px; /* width of the entire scrollbar */
+}
+
+aside::-webkit-scrollbar-track {
+  background: black; /* color of the tracking area */
+}
+
+aside::-webkit-scrollbar-thumb {
+  background-color: black; /* color of the scroll thumb */
+
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 3px solid black; /* creates padding around scroll thumb */
+}

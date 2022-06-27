@@ -12,7 +12,7 @@ export function Sidebar({isSidebarOpen, setIsSidebarOpen}: SidebarProps) {
 
   
   return (
-    <aside className={`w-full xl:w-[348px] bg-gray-700 p-6 border-l static border-gray-600 ${isSidebarOpen ? 'block' : 'hidden'} xl:block` }>
+    <aside className={`w-full xl:w-[348px] h-screen xl:h-auto overflow-y-scroll xl:overflow-hidden bg-gray-700 p-6 border-l static border-gray-600 ${isSidebarOpen ? 'block' : 'hidden'} xl:block` }>
       <span className="font-bold text-2xl pb-6 mb-6 border-b border-gray-500 block">Class schedule</span>
       <div className="flex flex-col gap-8">
       {data?.lessons.map(lesson => {
