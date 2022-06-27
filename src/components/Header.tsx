@@ -1,3 +1,4 @@
+import { CloseIconSvg } from "./CloseIconSvg";
 import { Logo } from "./Logo";
 import { MenuIconSvg } from "./MenuIconSvg";
 
@@ -15,7 +16,7 @@ export function Header({setIsSidebarOpen, isSidebarOpen}: SidebarProps) {
       className="xl:hidden cursor-pointer"
       onClick={() => setIsSidebarOpen(!isSidebarOpen)}
       >
-      <MenuIconSvg />
+      {isSidebarOpen? <CloseIconSvg /> : <MenuIconSvg />}
       </button>
     </header>
   )
